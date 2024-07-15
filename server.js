@@ -30,16 +30,29 @@ if (process.env.NODE_ENV === "development") {
 
 // CORS configuration
 const allowedOrigins = [
-  "http://localhost:5050",
-  "https://adogtion.onrender.com",
+  "http://localhost:5173",
+  "https://adogtion.onrender.com", // Your deployed frontend URL
 ];
 
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-);
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader("Access-Control-Allow-Origin", origin);
+  }
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(express.json());
