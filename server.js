@@ -2,6 +2,7 @@
 import express from "express";
 import morgan from "morgan";
 import * as dotenv from "dotenv";
+import cors from "cors";
 import mongoose from "mongoose";
 import "express-async-errors";
 import cookieParser from "cookie-parser";
@@ -26,6 +27,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+
+app.use(
+  cors({
+    origin: "http://localhost:5050",
+    credentials: true,
+  })
+);
 
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(express.json());
