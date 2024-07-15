@@ -2,7 +2,7 @@
 
 <img width="1440" alt="Screenshot 2024-07-15 at 2 29 19 AM" src="https://github.com/user-attachments/assets/e6e5b67a-d09d-426f-94d9-fbd9a69f1a4f">
 
-
+## Description
 [Adogtion](https://adogtion.onrender.com/) is a web service designed to connect potential dog adopters with dogs in need of homes. The platform allows users to browse available dogs, post dogs for adoption, and manage the adoption process through an admin panel.
 
 ## Features
