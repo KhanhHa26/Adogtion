@@ -28,9 +28,15 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+// CORS configuration
+const allowedOrigins = [
+  "http://localhost:5050",
+  "https://adogtion.onrender.com",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5050",
+    origin: allowedOrigins,
     credentials: true,
   })
 );
