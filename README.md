@@ -32,12 +32,14 @@
   
 3. Create a .env file in the root directory and add your environment variables:
 
-  `MONGO_URL=your_mongodb_connection_string
-  PORT=5050
-  NODE_ENV=development
-  JWT_SECRET=your_jwt_secret
-  JWT_EXPIRESIN=1d`
-  
+  ```MONGO_URL=your_mongodb_connection_string
+     PORT=5050
+     NODE_ENV=development
+     JWT_SECRET=your_jwt_secret
+     JWT_EXPIRESIN=1d
+   ```
+
+
 4. Run the development server:
 
   `npm run setup-production-app`
