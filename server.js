@@ -2,7 +2,6 @@
 import express from "express";
 import morgan from "morgan";
 import * as dotenv from "dotenv";
-import cors from "cors";
 import mongoose from "mongoose";
 import "express-async-errors";
 import cookieParser from "cookie-parser";
@@ -27,19 +26,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-
-// CORS configuration
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://adogtion.onrender.com",
-];
-
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-);
 
 app.use(express.static(path.resolve(__dirname, "./client/dist")));
 app.use(express.json());
