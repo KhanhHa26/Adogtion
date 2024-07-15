@@ -45,6 +45,3 @@
 
 ## Online Access
 The application is available online at the following link: [Adogtion](https://adogtion.onrender.com/)
-
-![Logo](https://adogtion.onrender.com/logo.png)
-
