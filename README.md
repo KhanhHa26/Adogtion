@@ -20,29 +20,36 @@
 ## Set Up
 1. Clone the repository:
    
-  `git clone https://github.com/KhanhHa26/Adogtion.git
-  cd Adogtion`
+  ```
+  git clone https://github.com/KhanhHa26/Adogtion.git
+  cd Adogtion
+  ```
 
 2. Install dependencies:
 
-  `npm install --legacy-peer-deps
+  ```
+  npm install --legacy-peer-deps
   cd client
   npm install --legacy-peer-deps
-  cd ..`
+  cd ..
+  ```
   
 3. Create a .env file in the root directory and add your environment variables:
 
-  ```MONGO_URL=your_mongodb_connection_string
-     PORT=5050
-     NODE_ENV=development
-     JWT_SECRET=your_jwt_secret
-     JWT_EXPIRESIN=1d
+  ```
+  MONGO_URL=your_mongodb_connection_string
+  PORT=5050
+  NODE_ENV=development
+  JWT_SECRET=your_jwt_secret
+  JWT_EXPIRESIN=1d
    ```
 
 
 4. Run the development server:
 
-  `npm run setup-production-app`
+  ```
+  npm run setup-production-app
+  ```
 
 
 ## Online Access
