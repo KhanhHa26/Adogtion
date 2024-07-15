@@ -1,6 +1,6 @@
 # Adogtion 
 
-Not done yet lol
+Not done yet it's 2:32AM i wanna sleep :(
 
 <img width="1440" alt="Screenshot 2024-07-15 at 2 29 19 AM" src="https://github.com/user-attachments/assets/e6e5b67a-d09d-426f-94d9-fbd9a69f1a4f">
 
